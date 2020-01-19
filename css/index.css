@@ -25,6 +25,7 @@ header .title {
   width: 90%;
   margin: 50px auto;
   overflow: hidden;
+  min-height: 390px;
 }
 
 .c-track {
@@ -38,14 +39,14 @@ header .title {
 
 
 .c-slide {
-  background: #4dc7a0;
+  background: #E9EEE6;
   border: 0px solid brown;
   outline: 1px solid white;
   display: inline-block;
 }
 
 .c-slide .c-slide-img {
-  width: 300px;
+  width: 100%;
   display: block;
   height: 300px;
 }
