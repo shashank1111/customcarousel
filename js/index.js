@@ -14,9 +14,26 @@ var nextBtn = document.getElementById('next');
 var prevArw = document.getElementById('arw-prv');
 var nextArw = document.getElementById('arw-nxt');
 document.getElementById('prev').disabled = true;
-var margin = 20;
+var responsive = [
+  { breakPoint: { width: 0, slidesToShow: 1, margin: 1 } },
+  { breakPoint: { width: 600, slidesToShow: 2, margin: 10 } },
+  { breakPoint: { width: 900, slidesToShow: 3, margin: 20 } },
+  { breakPoint: { width: 1024, slidesToShow: 5, margin: 20 } },
+];
 
-(Slider = () => {
+/*======== resize event handling ==========*/
+window.addEventListener('resize', init);
+function init() {
+  for (let i = 0; i < responsive.length; i++) {
+    if (window.innerWidth > responsive[i].breakPoint.width) {
+      slidesToShow = responsive[i].breakPoint.slidesToShow;
+      margin = responsive[i].breakPoint.margin;
+    }
+  }
+  Slider();
+}
+
+Slider = () => {
   /*============================ Calculate the Total Width of the Track ==========================*/
   (CalculateWidth = () => {
     totalWidth =
@@ -46,7 +63,7 @@ var margin = 20;
       elements[i].style.margin = '0' + margin / 2 + 'px';
     }
   })();
-})();
+};
 
 /*==================================== Handler for Next Button Click ===============================*/
 NextSlideHandler = () => {
@@ -81,3 +98,5 @@ SetButtonState = () => {
     nextArw.disabled = false;
   }
 };
+
+window.load = init();
