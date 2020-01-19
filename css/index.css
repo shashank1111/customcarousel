@@ -1,0 +1,18 @@
+html,
+body {
+  font-family: 'Ropa Sans', sans-serif;
+  margin: 0px auto;
+  font-size: 16px;
+}
+
+header,
+footer {
+  background-color: #E9EEE6;
+}
+
+header .title {
+  font-size: 3em;
+  padding: 30px;
+  color: #00679B;
+  margin: 0px;
+}
