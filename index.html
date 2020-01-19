@@ -15,7 +15,21 @@
     <header>
       <h1 class="title">Carousel Component</h1>
     </header>
+
     <div class="carousel" id="customCarousel">
+      <!-----------------------Arrows for mobile------------------------->
+      <div class="arrow-sctn">
+        <div>
+          <button class="arw arw-prev" id="arw-prv" onclick="PrevSlideHandler()">
+            <img src="./assets/arrow.svg" class="arw-img" alt="arrow-left"></button>
+        </div>
+        <div>
+          <button class="arw arw-next" id="arw-nxt" onclick="NextSlideHandler()">
+            <img src="./assets/arrow.svg" class="arw-img" alt="arrow-right"></button>
+        </div>
+      </div>
+
+      <!-----------------------Track for Slides------------------------->
       <div class="c-track" id="track">
         <div class="c-slide">
           <div>
@@ -79,6 +93,14 @@
         </div>
       </div>
     </div>
+
+    <!-----------------------Buttons Section------------------------->
+    <footer>
+      <div class="btn-sctn">
+        <button class="btn btn-prev" id="prev" onclick="PrevSlideHandler()">Prev</button>
+        <button class="btn btn-next" id="next" onclick="NextSlideHandler()">Next</button>
+      </div>
+    </footer>
   </section>
   <script src="js/index.js"></script>
 

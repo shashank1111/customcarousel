@@ -56,3 +56,97 @@ header .title {
   margin: 0;
   padding: 20px 0;
 }
+
+/*======================================  Button Section  ================================*/
+
+.btn-sctn {
+  text-align: center;
+  padding: 30px 0;
+  display: none;
+}
+
+.btn {
+  padding: 5px 15px;
+  margin: 0 2px;
+  background: #00679B;
+  color: #ffffff;
+  border: none;
+  font-size: 1.2em;
+  border: 1px solid #00679B;
+}
+
+.btn:hover {
+  background: #ffffff;
+  color: #00679B;
+  cursor: pointer;
+}
+
+.btn:focus,
+.arw:focus {
+  outline: none;
+}
+
+.btn:disabled {
+  cursor: crosshair;
+  background-color: #E9EEE6;
+  color: #00679b;
+}
+
+.btn-prev {
+  border-radius: 4px 0 0 4px;
+}
+
+.btn-next {
+  border-radius: 0 4px 4px 0;
+}
+
+
+.arrow-sctn {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 25%;
+  width: 90%
+}
+
+.arw {
+  background: rgba(230, 233, 238, 0.5);
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  width: 100px;
+}
+
+.arw-prev {
+  left: -60px;
+  transform: rotate(180deg);
+}
+
+.arw-prev .arw-img,
+.arw-next .arw-img {
+  position: relative;
+  width: 30px;
+  height: 40px;
+  left: -23px;
+}
+
+.arw-next {
+  right: -94px;
+}
+
+/*======================================  Media Queries for different Devices  ================================*/
+@media only screen and (min-width: 600px) {
+
+  .arrow-sctn {
+    display: none;
+  }
+
+  .btn-sctn {
+    display: block;
+  }
+
+  .c-slide .slide-img {
+    height: 200px;
+  }
+}
