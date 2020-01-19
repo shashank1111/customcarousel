@@ -16,3 +16,43 @@ header .title {
   color: #00679B;
   margin: 0px;
 }
+
+
+/*====================================  Carousel Section  ==================================*/
+
+.carousel {
+  position: relative;
+  width: 90%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.c-track {
+  font-size: 0;
+  position: relative;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+
+.c-slide {
+  background: #4dc7a0;
+  border: 0px solid brown;
+  outline: 1px solid white;
+  display: inline-block;
+}
+
+.c-slide .c-slide-img {
+  width: 300px;
+  display: block;
+  height: 300px;
+}
+
+.c-slide .c-title {
+  font-size: 20px;
+  background: #ffffff;
+  margin: 0;
+  padding: 20px 0;
+}
